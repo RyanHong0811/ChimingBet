@@ -13,7 +13,7 @@ class SoccerGameController extends Controller
     {
     	$day = Carbon::tomorrow()->format('Ymd');
     	$token = env('API_TOKEN');
-		$url = "https://api.betsapi.com/v1/events/upcoming?token={$token}&sport_id=1&LNG_ID=2&day={$day}";
+		$url = "https://api.betsapi.com/v1/events/upcoming?token={$token}&sport_id=1&LNG_ID=2&day={$day}&cc={$cc}";
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);

@@ -9,7 +9,7 @@ class SoccerGameController extends Controller
     /**
      * 回應對 GET /edititem/todb 的請求
      */
-    public function getGame($cc = 'eu')
+    public function getGame($cc = 'gb')
     {
     	$day = Carbon::tomorrow()->format('Ymd');
     	$token = env('API_TOKEN');
